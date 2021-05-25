@@ -1,0 +1,40 @@
+{
+  "name": "faster-median",
+  "version": "0.0.0",
+  "description": "🔥 A Quick Way to get the Median Value of an Array of Numbers (Typed or Untyped)",
+  "main": "faster-median.js",
+  "scripts": {
+    "cleanup": "npm uninstall median median-quickselect simple-statistics",
+    "perf": "node perf.js",
+    "setup": "npm install -D median median-quickselect simple-statistics",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/faster-median.git"
+  },
+  "keywords": [
+    "fast",
+    "faster",
+    "fastest",
+    "image",
+    "integers",
+    "math",
+    "median",
+    "no-data",
+    "numbers",
+    "pixels",
+    "quick",
+    "speed",
+    "stats"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/faster-median/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/faster-median#readme",
+  "devDependencies": {
+    "flug": "^1.1.0"
+  }
+}
