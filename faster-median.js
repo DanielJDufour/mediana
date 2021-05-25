@@ -23,7 +23,7 @@ const countWithTotal = ({ nums, no_data }) => {
 };
 
 const median_of_a_few = ({ nums, no_data }) => {
-  nums = nums.filter(n => n !== no_data).sort();
+  nums = nums.filter((n) => n !== no_data).sort();
   switch (nums.length) {
     case 0:
       return undefined;
@@ -78,7 +78,6 @@ const median_of_a_lot = ({ nums, no_data }) => {
     }
   }
 };
-
 
 const fasterMedian = ({ nums, no_data }) => {
   if (nums.length > 50) return median_of_a_lot({ nums, no_data });

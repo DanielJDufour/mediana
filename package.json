@@ -5,6 +5,7 @@
   "main": "faster-median.js",
   "scripts": {
     "cleanup": "npm uninstall median median-quickselect simple-statistics",
+    "format": "npx prettier --write *.js",
     "perf": "node perf.js",
     "setup": "npm install -D median median-quickselect simple-statistics",
     "test": "node test.js"
