@@ -86,4 +86,4 @@ const fasterMedian = ({ nums, no_data }) => {
 
 if (typeof module === "object") module.exports = fasterMedian;
 if (typeof window === "object") window.fasterMedian = fasterMedian;
-if (typeof self === "object") module.self = fasterMedian;
+if (typeof self === "object") self.fasterMedian = fasterMedian;
