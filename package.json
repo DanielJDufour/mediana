@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "🔥 A Quick Way to get the Median Value of an Array of Numbers (Typed or Untyped)",
   "main": "faster-median.js",
+  "files": [
+    "faster-median.js"
+  ],
   "scripts": {
     "cleanup": "npm uninstall median median-quickselect simple-statistics",
     "format": "npx prettier --write *.js",
