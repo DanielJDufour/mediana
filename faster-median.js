@@ -23,7 +23,7 @@ const countWithTotal = ({ nums, no_data }) => {
 };
 
 const median_of_a_few = ({ nums, no_data }) => {
-  nums = nums.filter((n) => n !== no_data).sort();
+  nums = nums.filter(n => n !== no_data).sort((a, b) => a - b);
   switch (nums.length) {
     case 0:
       return undefined;
@@ -43,7 +43,7 @@ const median_of_a_lot = ({ nums, no_data }) => {
   const { counts, total } = countWithTotal({ nums, no_data });
 
   // sort counts by value
-  const countArray = Object.values(counts).sort((a, b) => Math.sign(b.n - a.n));
+  const countArray = Object.values(counts).sort((a, b) => a.n - b.n);
   const half = total / 2;
   const number_of_unique_values = countArray.length;
   if (number_of_unique_values === 0) {
@@ -53,7 +53,6 @@ const median_of_a_lot = ({ nums, no_data }) => {
   } else {
     let x = 0;
 
-    // even count of numbers
     if (total % 2 === 0) {
       for (let i = 0; i < number_of_unique_values; i++) {
         const { n, ct } = countArray[i];
@@ -62,14 +61,13 @@ const median_of_a_lot = ({ nums, no_data }) => {
           // handle if odd or even
           // just barely pass cut off
           if (x - ct === half) {
-            return (countArray[i - 1] + n) / 2;
+            return (countArray[i - 1].n + n) / 2;
           } else {
             return n;
           }
         }
       }
     } else {
-      // odd count of numbers
       for (let i = 0; i < number_of_unique_values; i++) {
         const { n, ct } = countArray[i];
         x += ct;
@@ -79,8 +77,8 @@ const median_of_a_lot = ({ nums, no_data }) => {
   }
 };
 
-const fasterMedian = ({ nums, no_data }) => {
-  if (nums.length > 50) return median_of_a_lot({ nums, no_data });
+const fasterMedian = ({ nums, no_data, threshold = 50 }) => {
+  if (nums.length > threshold) return median_of_a_lot({ nums, no_data });
   else return median_of_a_few({ nums, no_data });
 };
 
