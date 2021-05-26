@@ -7,9 +7,9 @@ npm install faster-median
 ```
 
 # usage
-```
+```js
 const fasterMedian = require("faster-median");
 
 const nums = [0, 56, 123, 63, 763, ...];
-fasterMedian({ nums, no_data: 0})
+fasterMedian({ nums, no_data: 0 })
 ```
