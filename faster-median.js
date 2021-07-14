@@ -39,8 +39,10 @@ const median_of_a_few = ({ nums, no_data }) => {
   }
 };
 
-const median_of_a_lot = ({ nums, no_data }) => {
-  const { counts, total } = countWithTotal({ nums, no_data });
+const median_of_a_lot = ({ counts, nums, no_data, total }) => {
+  if (counts === undefined || total === undefined) {
+    ({ counts, total } = countWithTotal({ nums, no_data }));
+  }
 
   // sort counts by value
   const countArray = Object.values(counts).sort((a, b) => a.n - b.n);
@@ -77,8 +79,9 @@ const median_of_a_lot = ({ nums, no_data }) => {
   }
 };
 
-const fasterMedian = ({ nums, no_data, threshold = 50 }) => {
-  if (nums.length > threshold) return median_of_a_lot({ nums, no_data });
+const fasterMedian = ({ nums, no_data, threshold = 50, counts, total }) => {
+  if (counts !== undefined || total !== undefined || nums.length > threshold)
+    return median_of_a_lot({ counts, total, nums, no_data });
   else return median_of_a_few({ nums, no_data });
 };
 

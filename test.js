@@ -62,3 +62,14 @@ test("threshold", ({ eq }) => {
 
   eq(slowResult, fastResult);
 });
+
+test("hist", ({ eq }) => {
+  const counts = {};
+  let total = 0;
+  for (let i = 0; i < 100; i++) {
+    total += i;
+    counts[i] = { n: i, ct: i };
+  }
+  const result = fasterMedian({ counts, total });
+  eq(result, 70);
+});
