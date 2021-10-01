@@ -8,7 +8,7 @@ const countWithTotal = ({ nums, no_data }) => {
       if (n !== no_data) {
         total++;
         if (n in counts) counts[n].ct++;
-        counts[n] = { n, ct: 1 };
+        else counts[n] = { n, ct: 1 };
       }
     }
   } else {
