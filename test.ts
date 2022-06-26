@@ -1,5 +1,5 @@
-const test = require("flug");
-const fasterMedian = require("./faster-median");
+import test from "flug";
+import fasterMedian from "./src/index";
 
 test("none", ({ eq }) => {
   const result = fasterMedian({ nums: [] });
@@ -22,7 +22,7 @@ test("simple", ({ eq }) => {
 });
 
 test("super large amount of data", ({ eq }) => {
-  const nums = [];
+  const nums: number[] = [];
   for (let i = 0; i < 1_000_000; i++) {
     nums.push(Math.round(Math.random() * 255));
   }
@@ -31,13 +31,17 @@ test("super large amount of data", ({ eq }) => {
 });
 
 test("performance comparison", ({ eq }) => {
-  const nums = [];
+  const nums: number[] = [];
   for (let i = 0; i < 1_000_000; i++) {
     nums.push(Math.round(Math.random() * 255));
   }
   console.time("large");
   fasterMedian({ nums });
   console.timeEnd("large");
+
+  console.time("large precise=true");
+  fasterMedian({ nums, precise: true });
+  console.timeEnd("large precise=true");
 
   console.time("old");
   const sorted = nums.sort();
@@ -52,13 +56,12 @@ test("threshold", ({ eq }) => {
 
   // slower way
   const slowResult = fasterMedian({
-    debug_level: 1,
     nums,
     threshold: nums.length + 10,
   });
 
   // faster way
-  const fastResult = fasterMedian({ debug_level: 1, nums, threshold: 1 });
+  const fastResult = fasterMedian({ nums, threshold: 1 });
 
   eq(slowResult, fastResult);
 });

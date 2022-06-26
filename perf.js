@@ -1,5 +1,5 @@
 const funcs = {
-  "faster-median": require("./faster-median"),
+  "faster-median": require("./src/index"),
   "median-quickselect": require("median-quickselect"),
   "simple-statistics": require("simple-statistics").median,
 };

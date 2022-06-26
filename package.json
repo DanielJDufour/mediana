@@ -1,17 +1,24 @@
 {
   "name": "faster-median",
   "version": "0.2.1",
-  "description": "🔥 A Quick Way to get the Median Value of an Array of Numbers (Typed or Untyped)",
-  "main": "faster-median.js",
+  "description": "🔥 A Quick and Precise Way to get the Median Value of an Array of Numbers (Typed or Untyped)",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "files": [
-    "faster-median.js"
+    "src/index.d.ts",
+    "src/index.js",
+    "src/count.js",
+    "src/mean.js",
+    "src/median-of-a-few.js",
+    "src/median-of-a-lot.js"
   ],
   "scripts": {
     "cleanup": "npm uninstall median median-quickselect simple-statistics",
-    "format": "npx prettier --arrow-parens=avoid --write *.js",
+    "f": "npm run format",
+    "format": "npx prettier --arrow-parens=avoid --write *.js src/*.js",
     "perf": "node perf.js",
     "setup": "npm install -D median median-quickselect simple-statistics",
-    "test": "node test.js"
+    "test": "npx ts-node test.ts"
   },
   "repository": {
     "type": "git",
@@ -39,6 +46,11 @@
   },
   "homepage": "https://github.com/DanielJDufour/faster-median#readme",
   "devDependencies": {
-    "flug": "^1.1.0"
+    "flug": "^2.3.1",
+    "median-quickselect": "^1.0.1",
+    "simple-statistics": "^7.7.5"
+  },
+  "dependencies": {
+    "preciso": "^0.5.0"
   }
 }
