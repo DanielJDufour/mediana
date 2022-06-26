@@ -1,6 +1,6 @@
 {
   "name": "faster-median",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "🔥 A Quick and Precise Way to get the Median Value of an Array of Numbers (Typed or Untyped)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
