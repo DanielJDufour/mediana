@@ -1,7 +1,7 @@
 {
   "name": "faster-median",
   "version": "1.0.0",
-  "description": "🔥 A Quick and Precise Way to get the Median Value of an Array of Numbers (Typed or Untyped)",
+  "description": "A Quick and Precise Library for Calculating the Median Value of an Array of Numbers (Typed or Untyped)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "files": [
@@ -13,6 +13,8 @@
     "src/median-of-a-lot.js"
   ],
   "scripts": {
+    "b": "npm run build",
+    "build": "npx browserify ./src/index.js > ./dist/mediana.js",
     "cleanup": "npm uninstall median median-quickselect simple-statistics",
     "f": "npm run format",
     "format": "npx prettier --arrow-parens=avoid --write *.js src/*.js",

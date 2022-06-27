@@ -1,4 +1,4 @@
-export default function fasterMedian<P>(data: {
+export function calculate<P>(data: {
   nums?: number[];
   no_data?: number;
   counts?: {
