@@ -1,5 +1,5 @@
 {
-  "name": "faster-median",
+  "name": "mediana",
   "version": "1.0.0",
   "description": "A Quick and Precise Library for Calculating the Median Value of an Array of Numbers (Typed or Untyped)",
   "main": "src/index.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielJDufour/faster-median.git"
+    "url": "git+https://github.com/DanielJDufour/mediana.git"
   },
   "keywords": [
     "fast",
@@ -44,9 +44,9 @@
   "author": "Daniel J. Dufour",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/DanielJDufour/faster-median/issues"
+    "url": "https://github.com/DanielJDufour/mediana/issues"
   },
-  "homepage": "https://github.com/DanielJDufour/faster-median#readme",
+  "homepage": "https://github.com/DanielJDufour/mediana#readme",
   "devDependencies": {
     "flug": "^2.3.1",
     "median-quickselect": "^1.0.1",
