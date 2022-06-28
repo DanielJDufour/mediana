@@ -4,13 +4,16 @@
   "description": "A Quick and Precise Library for Calculating the Median Value of an Array of Numbers (Typed or Untyped)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
+  "unpkg": "./dist/mediana.js",
+  "jsdelivr": "./dist/mediana.js",
   "files": [
     "src/index.d.ts",
     "src/index.js",
     "src/count.js",
     "src/mean.js",
     "src/median-of-a-few.js",
-    "src/median-of-a-lot.js"
+    "src/median-of-a-lot.js",
+    "dist/mediana.js"
   ],
   "scripts": {
     "b": "npm run build",
