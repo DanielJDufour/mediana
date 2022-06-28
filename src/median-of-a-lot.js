@@ -13,7 +13,7 @@ function median_of_a_lot({ counts, nums, no_data, precise = false, total }) {
   if (number_of_unique_values === 0) {
     return undefined;
   } else if (number_of_unique_values === 1) {
-    return precise ? countArray[0].n : countArray[0].n.toString();
+    return precise ? countArray[0].n.toString() : countArray[0].n;
   } else {
     let x = 0;
 

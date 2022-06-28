@@ -21,6 +21,11 @@ test("simple", ({ eq }) => {
   eq(result2, 2);
 });
 
+test("median of one", ({ eq }) => {
+  eq(calculate({ nums: [99], threshold: 0 }), 99);
+  eq(calculate({ nums: [99], precise: true }), "99");
+});
+
 test("super large amount of data", ({ eq }) => {
   const nums: number[] = [];
   for (let i = 0; i < 1_000_000; i++) {
