@@ -11,8 +11,6 @@
     "src/index.js",
     "src/count.js",
     "src/mean.js",
-    "src/median-of-a-few.js",
-    "src/median-of-a-lot.js",
     "dist/mediana.js"
   ],
   "scripts": {
