@@ -20,7 +20,7 @@
     "build": "npx browserify ./src/index.js > ./dist/mediana.js",
     "cleanup": "npm uninstall median median-quickselect simple-statistics",
     "f": "npm run format",
-    "format": "npx prettier --arrow-parens=avoid --write *.js src/*.js",
+    "format": "npx prettier --arrow-parens=avoid --print-width=200 --trailing-comma=none --write *.js src/*.js",
     "perf": "node perf.js",
     "setup": "npm install -D median median-quickselect simple-statistics",
     "test": "npx ts-node test.ts"
@@ -51,11 +51,11 @@
   },
   "homepage": "https://github.com/DanielJDufour/mediana#readme",
   "devDependencies": {
-    "flug": "^2.3.1",
+    "flug": "^2.7.2",
     "median-quickselect": "^1.0.1",
-    "simple-statistics": "^7.7.5"
+    "simple-statistics": "^7.8.3"
   },
   "dependencies": {
-    "preciso": "^0.5.0"
+    "preciso": "^0.12.2"
   }
 }

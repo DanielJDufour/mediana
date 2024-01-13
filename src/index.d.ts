@@ -1,13 +1,7 @@
-export function calculate<P>(data: {
-  nums?: number[];
-  no_data?: number;
-  counts?: {
-    [key: string]: {
-      n: number;
-      ct: number;
-    }
-  },
-  precise?: P & boolean;
-  threshold?: number;
-  total?: number;
-}): P extends true ? string : number;
+export function calculate<P>(
+  nums: number[] | Iterable<number>,
+  options?: {
+    no_data?: number | number[] | undefined | null;
+    precise?: P & boolean;
+  }
+): P extends true ? string : number;
